@@ -1,14 +1,7 @@
-/*
-
-Template 2076 Zentro
-
-http://www.tooplate.com/view/2076-zentro
-
-*/
 
 body
 	{
-		background: #ffffff;
+		background: #f0f0f0;
     font-family: 'Roboto', sans-serif;
     font-weight: 400;
     position: relative;
@@ -37,8 +30,11 @@ hr {
 	width: 120px;
 }
 
-
-#contact {
+#menu, #cuisine, #team {
+	padding-top: 100px;
+	padding-bottom: 100px;
+}
+#menu, #contact {
   background: #f0f0f0;
 }
 
@@ -102,12 +98,14 @@ hr {
   box-shadow: 0px 2px 8px 0px rgba(50, 50, 50, 0.04);
   border: none;
   margin-bottom: 0;
+  
 }
 .navbar-brand, .navbar-nav li a {
   line-height: 28px;
+  color: #FFFFFF;
 }
 .navbar-default .navbar-brand  {
-  color: #5C5C5C;
+  color: #FFFFFF;
   font-size: 22px;
   font-weight: bold;
   letter-spacing: 2px;
@@ -115,6 +113,7 @@ hr {
 .navbar-default .navbar-nav li a {
   font-size: 12px;
   letter-spacing: 1px;
+  color: white;
 }
 
 /* home section */
@@ -156,6 +155,103 @@ hr {
   background: #ffffff;
   color: #202020;
 }
+  
+ #home .search input{
+	border-radius: 0;  
+  font-weight: bold; 
+  letter-spacing: 2px;
+  margin-top: 40px;
+	height:58px;
+}
+
+/* team section */
+#team {
+  text-align: center;
+}
+#team h3 {
+  font-size: 18px;
+  line-height: 4px;
+}
+#team h4 {
+  color: #5C5C5C;
+  padding-top: 24px;
+}
+#team .col-md-4 {
+ padding-top: 42px;
+}
+
+/* menu section */
+#menu h4 {
+	line-height: 1.5;
+}
+#menu .col-md-8 {
+  padding-bottom: 42px;
+}
+#menu .col-md-6 {
+  padding-bottom: 18px;
+}
+#menu span {
+  color: #5C5C5C;
+}
+
+/* cuisine section */
+#cuisine {
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+#cuisine .col-md-4 {
+  padding-top: 52px;
+}
+#cuisine img {
+  width: 100%;
+  padding-bottom: 18px;
+}
+#cuisine .col-md-4 div {
+  position: relative;
+  bottom: 18px;
+  padding-bottom: 12px;
+}
+#cuisine h3 {
+  font-size: 18px;
+  line-height: 8px;
+}
+
+/* Login section */
+
+#login {
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+#login .col-md-8 {
+  margin-bottom: 32px;
+}
+#login .form-control {
+  background: #ffffff;
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  transition: all 0.4s ease-in-out;
+}
+#login .form-control:focus {
+  border-color: #f9f9f9;
+}
+#login input {
+  height: 48px;
+}
+#login input[type="submit"] {
+  background: transparent;
+  border: 2px solid #999;
+  border-radius: 10px;
+  letter-spacing: 2px;
+  margin-top: 12px;
+  height: 50px;
+}
+#login input[type="submit"]:hover {
+  background: #999;
+  color: #ffffff;
+}
 
 /* contact section */
 #contact {
@@ -195,7 +291,7 @@ hr {
 
 /* footer section */
 footer {
-  background: url('../images/footer-bg.jpg') 50% 0 repeat-y fixed;
+  background: url('../images/footerimg.jpg') 50% 0 repeat-y fixed;
   -webkit-background-size: cover;
   background-size: cover;
   background-position: center;

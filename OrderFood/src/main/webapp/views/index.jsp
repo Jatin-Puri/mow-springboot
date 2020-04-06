@@ -46,7 +46,7 @@ rel="stylesheet">
 			<ul class="nav navbar-nav navbar-right">
 				<li><a href="#home" class="smoothScroll">HOME</a></li>
 				<li><a href="#gallery" class="smoothScroll">TODAY SPECIAL</a></li>
-				<li><a href="#menu" class="smoothScroll">CONTACT</a></li>
+				<li><a href="image/upload" class="smoothScroll">CONTACT</a></li>
 				<li><a href="customer/loginForm" class="smoothScroll">LOGIN</a></li>
 				<li><a href="customer/showForm" class="smoothScroll">SIGN UP</a></li>
 			</ul>
