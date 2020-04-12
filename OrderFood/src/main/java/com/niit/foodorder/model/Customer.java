@@ -1,74 +1,60 @@
 package com.niit.foodorder.model;
 
+import java.util.List;
+
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
-
-import javax.persistence.*;
-
+import javax.persistence.UniqueConstraint;
 
 
 @Entity
-@Table(name="customer")
+@Table(uniqueConstraints={
+	    @UniqueConstraint(columnNames = {"id","user_id"})
+	}) 
 public class Customer {
 
 	@Id
-	//@GeneratedValue(strategy=GenerationType.IDENTITY)
-	@Column(name="phone")
-	private String phone;
-	
-	
-	@Column(name="name")
-	private String name;
-	
-	@Column(name="password")
-	private String password;
-	
-	@Column(name="address")
-	private String address;
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
+	private Integer id;
+	@OneToOne(cascade=CascadeType.ALL)
+	@JoinColumn(name="user_id")
+	private Users user;
 
-	public String getPhone() {
-		return phone;
+	@OneToMany(targetEntity=FoodOrder.class,cascade=CascadeType.ALL)
+	@JoinColumn(name="customer_id")
+	private List<FoodOrder> foodOrder;
+
+	public Integer getId() {
+		return id;
 	}
 
-	public void setPhone(String phone) {
-		this.phone = phone;
+	public void setId(Integer id) {
+		this.id = id;
 	}
 
-	public String getName() {
-		return name;
+	public Users getUser() {
+		return user;
 	}
 
-	public void setName(String name) {
-		this.name = name;
+	public void setUser(Users user) {
+		this.user = user;
 	}
 
-	public String getPassword() {
-		return password;
+	public List<FoodOrder> getFoodOrder() {
+		return foodOrder;
 	}
 
-	public void setPassword(String password) {
-		this.password = password;
+	public void setFoodOrder(List<FoodOrder> foodOrder) {
+		this.foodOrder = foodOrder;
 	}
-
-	public String getAddress() {
-		return address;
-	}
-
-	public void setAddress(String address) {
-		this.address = address;
-	}
-
-	public Customer() {
-		
-	}
-
-	@Override
-	public String toString() {
-		return "Customer [phone=" + phone + ", name=" + name + ", password=" + password + ", address=" + address + "]";
-	}
-
-
 	
 	
 }

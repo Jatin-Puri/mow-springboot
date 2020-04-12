@@ -22,7 +22,7 @@ public class CutomerController {
 	private CustomerService customerService;
 
 	@RequestMapping("/showForm")
-	public String showFormForAdd(Model model) {
+	public String registrationCustomer(Model model) {
 		Customer customer = new Customer();
 		
 		model.addAttribute("customer", customer);
@@ -43,26 +43,26 @@ public class CutomerController {
 	
 	}
 	
-	@RequestMapping(value="/checkLogin",method= {RequestMethod.POST,RequestMethod.GET})	
-	public String checkLogin(HttpServletRequest request,Model model) {
-		String phone=request.getParameter("phone");
-		String password=request.getParameter("password");
-		List<Customer> customer=customerService.findByPhoneAndPassword(phone,password);
-		if(customer!=null)
-		{
-			model.addAttribute("customer",customer.get(0));
-			return "welcome";
-			
-			
-		}
-		else
-		{
-			model.addAttribute("message","Invalid Phone or Password");
-			return "redirect:/customer/loginForm";
-		}
-		
-		
-	}
+//	@RequestMapping(value="/checkLogin",method= {RequestMethod.POST,RequestMethod.GET})	
+//	public String checkLogin(HttpServletRequest request,Model model) {
+//		String phone=request.getParameter("phone");
+//		String password=request.getParameter("password");
+//		List<Customer> customer=customerService.findByPhoneAndPassword(phone,password);
+//		if(customer!=null)
+//		{
+//			model.addAttribute("customer",customer.get(0));
+//			return "welcome";
+//			
+//			
+//		}
+//		else
+//		{
+//			model.addAttribute("message","Invalid Phone or Password");
+//			return "redirect:/customer/loginForm";
+//		}
+//		
+//		
+//	}
 
 	/*
 	 * @RequestMapping("/edit") public ModelAndView

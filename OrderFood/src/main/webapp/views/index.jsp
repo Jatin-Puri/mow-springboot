@@ -20,7 +20,7 @@ rel="stylesheet">
 	
 <link href="<c:url value="/resources/static/css/font-awesome.min.css" />"
 rel="stylesheet">
-<link href="<c:url value="/resources/static/css/nivo-lightbox.css.css" />"
+<link href="<c:url value="/resources/static/css/nivo-lightbox.css" />"
 rel="stylesheet">
 <link href="<c:url value="/resources/static/css/nivo_themes/default.css" />"
 rel="stylesheet">

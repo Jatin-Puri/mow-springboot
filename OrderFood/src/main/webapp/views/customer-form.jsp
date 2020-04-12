@@ -43,13 +43,13 @@
 						<label for="name" class="col-md-3 control-label">
 							Name</label>
 						<div class="col-md-9">
-							<form:input path="name" cssClass="form-control" />
+							<form:input path="user.name" cssClass="form-control" />
 						</div>
 					</div>
 					<div class="form-group">
 						<label for="password" class="col-md-3 control-label">Password</label>
 						<div class="col-md-9">
-							<form:password path="password" cssClass="form-control" />
+							<form:password path="user.password" cssClass="form-control" />
 						</div>
 					</div>
 
@@ -57,13 +57,13 @@
 						<label for="phone" class="col-md-3 control-label">Phone
 							Number</label>
 						<div class="col-md-9">
-							<form:input path="phone" cssClass="form-control" />
+							<form:input path="user.phone" cssClass="form-control" />
 						</div>
 					</div>
 					<div class="form-group">
-						<label for="address" class="col-md-3 control-label">Address</label>
+						<label for="user.address.city" class="col-md-3 control-label">Address</label>
 						<div class="col-md-9">
-							<form:input path="address" cssClass="form-control" />
+							<form:input path="user.address.city" cssClass="form-control" />
 						</div>
 					</div>
 

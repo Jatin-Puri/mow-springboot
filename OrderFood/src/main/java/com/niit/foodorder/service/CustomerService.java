@@ -1,10 +1,12 @@
 package com.niit.foodorder.service;
 
-import java.util.List;
+
+
+
+import javax.transaction.Transactional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Transactional;
 
 import com.niit.foodorder.model.Customer;
 import com.niit.foodorder.repository.CustomerRepository;
@@ -13,24 +15,11 @@ import com.niit.foodorder.repository.CustomerRepository;
 @Transactional
 public class CustomerService {
 
-	
-	
 	@Autowired
-	private CustomerRepository repo;
-	
-
-	 public void save (Customer customer) {
-		 repo.save(customer);
-		 
-	 }
-	/*
-	 public void delete(long id) {
-		 repo.deleteById(Long id);
-	 }*/
-
-
-	public List<Customer> findByPhoneAndPassword(String phone, String password) {
+	private CustomerRepository customerRepository;
+	public Customer save(Customer customer) {
 		// TODO Auto-generated method stub
-		return repo.findByPhoneAndPassword(phone,password);
+		return customerRepository.save(customer);
 	}
+
 }
