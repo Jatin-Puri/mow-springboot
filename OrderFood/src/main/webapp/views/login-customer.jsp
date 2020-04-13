@@ -21,42 +21,32 @@
 				<hr>
 			</div>
 
-			<div class="col-md-2 col-sm-1"></div>
-		</div>
-
-				<div class="panel-body">
-					<form action="checkLogin" cssClass="form-horizontal"
-						method="post">
-						
-						
-						<div class="form-group">
-							<label for="phone" class="col-md-3 control-label">
-								Phone Number</label>
-							<div class="col-md-9">
-								<input name="phone" cssClass="form-control" />
-							</div>
-						</div>
-
-						
-						<div class="form-group">
-							<label for="password" class="col-md-3 control-label">
-							Password</label>
-							<div class="col-md-9">
-								<input type="password" name="password" cssClass="form-control" />
-							</div>
-						</div>
-						
+			<div class="modal-header">		
+			<h1 class="heading" >Login To Continue</h1>
+				<h3>${msg}</h3>	
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+			</div>
+			<div class="modal-body">
+				<form action="authenticLogin" method="post">
+					<div class="form-group">
+						<input type="text" class="form-control" placeholder="Username" name="phone" required="required">
+					</div>
+					<div class="form-group">
+						<input type="password" class="form-control" placeholder="Password" name="password" required="required">
+					</div>
+					<div class="form-group">
+						<input type="submit" class="btn btn-primary btn-block btn-lg" value="Sign in">
+					</div>
+				</form>				
+				<p class="hint-text small"><a href="#">Forgot Your Password?</a></p>
+			</div>
+	
 
 
 
 
-						<div class="form-group">
-							<div class="col-md-offset-3 col-md-6 col-sm-offset-3 col-sm-6">
-						<input name="submit" type="submit" class="form-control" id="submit" value="Submit">
-				</div>
-				</div>
-					</form>
 					
+			
 
 
 				</div>

@@ -13,12 +13,11 @@ import javax.persistence.OneToOne;
 import javax.persistence.Table;
 import javax.persistence.UniqueConstraint;
 
-
 @Entity
 @Table(uniqueConstraints={
 	    @UniqueConstraint(columnNames = {"id","user_id"})
 	}) 
-public class Customer {
+public class Restaurant {
 
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
@@ -26,34 +25,35 @@ public class Customer {
 	@OneToOne(cascade=CascadeType.ALL)
 	@JoinColumn(name="user_id")
 	private Users user;
-
-	@OneToMany(targetEntity=FoodOrder.class,cascade=CascadeType.ALL)
-	@JoinColumn(name="customer_id")
-	private List<FoodOrder> foodOrder;
-
+	@OneToMany(cascade=CascadeType.ALL)
+	@JoinColumn(name="resturant_id")
+	private List<Food> foodList;
+	
+	private String imageUrl;
+	
+	public String getImageUrl() {
+		return imageUrl;
+	}
+	public void setImageUrl(String imageUrl) {
+		this.imageUrl = imageUrl;
+	}
 	public Integer getId() {
 		return id;
 	}
-
 	public void setId(Integer id) {
 		this.id = id;
 	}
-
 	public Users getUser() {
 		return user;
 	}
-
 	public void setUser(Users user) {
 		this.user = user;
 	}
-
-	public List<FoodOrder> getFoodOrder() {
-		return foodOrder;
+	public List<Food> getFoodList() {
+		return foodList;
 	}
-
-	public void setFoodOrder(List<FoodOrder> foodOrder) {
-		this.foodOrder = foodOrder;
+	public void setFoodList(List<Food> foodList) {
+		this.foodList = foodList;
 	}
-	
 	
 }

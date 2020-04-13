@@ -26,6 +26,8 @@
 				<div class="col-md-offset-1 col-md-10 col-sm-12 text-center">
 					<h1 class="heading">Register Yourself</h1>
 					<hr>
+					<h3>${msg }</h3>
+					<hr/>
 				</div>
 
 				<div class="col-md-2 col-sm-1"></div>
@@ -36,44 +38,52 @@
 			<div class="panel-body">
 				<form:form action="save" cssClass="form-horizontal" method="post"
 					modelAttribute="customer">
-
-
-
+<div class="form-group">
+						<div class="row">
+						<div class="col-xs-6"><input type="text" class="form-control" name="name" placeholder=" Name" required="required"></div>
+						
+						</div>     
+					</div>			
+					
 					<div class="form-group">
-						<label for="name" class="col-md-3 control-label">
-							Name</label>
-						<div class="col-md-9">
-							<form:input path="user.name" cssClass="form-control" />
-						</div>
+						<input type="text" class="form-control" name="phone" placeholder="Phone Number" required="required">
+					</div>
+					
+					<div class="form-group">
+						<input type="text" class="form-control" name="address.baseAddress"  placeholder="Address" required="required">
+					</div>
+					
+					<div class="form-group">
+						<input type="text" class="form-control" placeholder="City" name="address.city" required="required">
+					</div>
+						<div class="form-group">
+						<input type="text" class="form-control" name="address.state"  placeholder="State" required="required">
 					</div>
 					<div class="form-group">
-						<label for="password" class="col-md-3 control-label">Password</label>
-						<div class="col-md-9">
-							<form:password path="user.password" cssClass="form-control" />
-						</div>
+						<input type="text" class="form-control" placeholder="Pin"name="address.pincode"  required="required">
+					</div>
+					
+					<div class="form-group">
+						<input type="password" class="form-control" placeholder="Password"   required="required">
+					</div>
+					
+					<div class="form-group">
+						<input type="password" class="form-control" name="password"  placeholder="Confirm Password" required="required">
+					</div>
+						<div class="form-group">
+						<select name="usersType">
+						<option value="customer">Customer</option>
+						<option value="resturant">Resturant</option>
+						</select>
+					</div>
+					
+					<div class="form-group">
+						<input type="submit" class="btn btn-primary btn-block btn-lg" value="Sign Up">
 					</div>
 
-					<div class="form-group">
-						<label for="phone" class="col-md-3 control-label">Phone
-							Number</label>
-						<div class="col-md-9">
-							<form:input path="user.phone" cssClass="form-control" />
-						</div>
-					</div>
-					<div class="form-group">
-						<label for="user.address.city" class="col-md-3 control-label">Address</label>
-						<div class="col-md-9">
-							<form:input path="user.address.city" cssClass="form-control" />
-						</div>
-					</div>
 
-					<div class="form-group">
-						<div class="col-md-offset-3 col-md-6 col-sm-offset-3 col-sm-6">
-							<input name="submit" type="submit" class="form-control"
-								id="submit" value="Submit">
-						</div>
-					</div>
 				</form:form>
+				<p class="hint-text small"><a href="loginForm1">Already Have an Account ?</a></p>
 			</div>
 		</section>
 

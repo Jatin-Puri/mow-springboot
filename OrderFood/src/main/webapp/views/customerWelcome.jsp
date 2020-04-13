@@ -7,6 +7,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-
+<h1>Welcome Customer</h1>
+${customer}
 </body>
 </html>

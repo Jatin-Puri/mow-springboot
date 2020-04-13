@@ -21,21 +21,21 @@ public class CutomerController {
 	@Autowired
 	private CustomerService customerService;
 
-	@RequestMapping("/showForm")
-	public String registrationCustomer(Model model) {
-		Customer customer = new Customer();
-		
-		model.addAttribute("customer", customer);
+//	@RequestMapping("/showForm")
+//	public String registrationCustomer(Model model) {
+//		Customer customer = new Customer();
+//		
+//		model.addAttribute("customer", customer);
+//
+//		return "customer-form";
+//	}
 
-		return "customer-form";
-	}
-
-	@RequestMapping(value = "/save", method = RequestMethod.POST)
-	public String saveCustomer(@ModelAttribute("customer") Customer customer) {
-		customerService.save(customer);
-
-		return "login-customer";
-	}
+//	@RequestMapping(value = "/save", method = RequestMethod.POST)
+//	public String saveCustomer(@ModelAttribute("customer") Customer customer) {
+//		customerService.save(customer);
+//
+//		return "login-customer";
+//	}
 	
 	@RequestMapping(value="/loginForm",method= {RequestMethod.POST,RequestMethod.GET})
 	public String loginForm(Model model) {
