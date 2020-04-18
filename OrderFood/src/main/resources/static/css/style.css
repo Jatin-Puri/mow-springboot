@@ -115,6 +115,9 @@ hr {
   letter-spacing: 1px;
   color: white;
 }
+.navbar-default .navbar-brand:hover{
+	color: white;
+}
 
 /* home section */
 #home {

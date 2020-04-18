@@ -13,6 +13,8 @@ import javax.persistence.OneToOne;
 import javax.persistence.Table;
 import javax.persistence.UniqueConstraint;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 @Entity
 @Table(uniqueConstraints={
 	    @UniqueConstraint(columnNames = {"id","user_id"})
@@ -24,6 +26,7 @@ public class Restaurant {
 	private Integer id;
 	@OneToOne(cascade=CascadeType.ALL)
 	@JoinColumn(name="user_id")
+	@JsonIgnore
 	private Users user;
 	@OneToMany(cascade=CascadeType.ALL)
 	@JoinColumn(name="resturant_id")

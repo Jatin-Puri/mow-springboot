@@ -3,8 +3,9 @@ package com.niit.foodorder.model;
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.Id;
-import javax.persistence.JoinColumn;
 import javax.persistence.OneToOne;
+
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 @Entity
 public class Address {
@@ -17,7 +18,7 @@ public class Address {
 	private Integer pincode;
 	
 	@OneToOne(cascade=CascadeType.ALL,mappedBy="address")
-	
+	@JsonIgnore
 	private Users user;
 
 	public String getBaseAddress() {

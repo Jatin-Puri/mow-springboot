@@ -36,6 +36,15 @@ public class Users {
 	private Address address;
 	
 	
+	private String role;
+	
+	public String getRole() {
+		return role;
+	}
+
+	public void setRole(String role) {
+		this.role = role;
+	}
 
 	public Customer getCustomer() {
 		return customer;

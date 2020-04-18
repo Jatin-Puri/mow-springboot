@@ -50,7 +50,7 @@ pageEncoding="ISO-8859-1"%>
 				<span class="icon icon-bar"></span>
 				<span class="icon icon-bar"></span>
 			</button>
-			<a href="#" class="navbar-brand">Meal On Wheels</a>
+			<p class="navbar-brand" > MEAL ON WHEELS</p>
 		</div>
 		<div class="collapse navbar-collapse">
 			<ul class="nav navbar-nav navbar-right">

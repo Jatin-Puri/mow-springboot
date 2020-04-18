@@ -6,6 +6,8 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.ManyToMany;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 @Entity
 public class FoodOrder {
 
@@ -14,6 +16,7 @@ public class FoodOrder {
 	private Double totalPrice;
 	private Integer qunatity;
 	@ManyToMany(mappedBy="order")
+	@JsonIgnore
 	private List<Food> food;
 	public Integer getId() {
 		return id;
